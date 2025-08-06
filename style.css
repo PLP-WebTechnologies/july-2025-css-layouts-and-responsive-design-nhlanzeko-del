@@ -1,0 +1,166 @@
+/* ================
+   BASE STYLES
+   ================ */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --spacing: 1rem;
+    --border-radius: 4px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+}
+
+/* ================
+   LAYOUT: FLEXBOX
+   ================ */
+/* Navigation - Flexbox example */
+.navbar {
+    background-color: var(--dark-color);
+    padding: var(--spacing);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: var(--primary-color);
+}
+
+/* Features section - Flexbox example */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing);
+    padding: var(--spacing);
+}
+
+.feature-card {
+    flex: 1 1 300px;
+    background: var(--light-color);
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* ================
+   LAYOUT: CSS GRID
+   ================ */
+/* Main container - Grid example */
+.main-container {
+    display: grid;
+    grid-template-areas:
+        "hero hero hero"
+        "features features sidebar"
+        "gallery gallery sidebar";
+    grid-gap: var(--spacing);
+    padding: var(--spacing);
+}
+
+.hero {
+    grid-area: hero;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: var(--border-radius);
+}
+
+.features {
+    grid-area: features;
+}
+
+.gallery {
+    grid-area: gallery;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing);
+}
+
+.gallery-item {
+    background-color: var(--secondary-color);
+    height: 150px;
+    border-radius: var(--border-radius);
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: var(--light-color);
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+}
+
+/* ================
+   HEADER & FOOTER
+   ================ */
+.header {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--dark-color);
+    color: white;
+}
+
+.footer {
+    text-align: center;
+    padding: var(--spacing);
+    background-color: var(--dark-color);
+    color: white;
+}
+
+/* ================
+   MEDIA QUERIES
+   Responsive Breakpoints
+   ================ */
+
+/* Tablet: 768px and below */
+@media (max-width: 768px) {
+    .main-container {
+        grid-template-areas:
+            "hero hero"
+            "features features"
+            "gallery gallery"
+            "sidebar sidebar";
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Mobile: 480px and below */
+@media (max-width: 480px) {
+    .features {
+        flex-direction: column;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .header, .hero {
+        padding: 1rem;
+    }
+}
