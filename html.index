@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Responsive Design</h1>
+        <p>Flexbox & Grid Layout</p>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-container">
+        <section class="hero">
+            <h2>Welcome to our site</h2>
+            <p>Explore our responsive layout examples</p>
+        </section>
+
+        <section class="features">
+            <article class="feature-card">
+                <h3>Flexbox</h3>
+                <p>Modern layout mode for efficient space distribution</p>
+            </article>
+            <article class="feature-card">
+                <h3>CSS Grid</h3>
+                <p>Two-dimensional layout system for the web</p>
+            </article>
+            <article class="feature-card">
+                <h3>Responsive</h3>
+                <p>Adapts to all screen sizes</p>
+            </article>
+        </section>
+
+        <section class="gallery">
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+        </section>
+
+        <aside class="sidebar">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Flexbox Guide</a></li>
+                <li><a href="#">Grid Tutorial</a></li>
+                <li><a href="#">Media Queries</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2023 Responsive Design Demo</p>
+    </footer>
+</body>
+</html>
